@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objedinjeni HTML Resursi</title>
+     <link rel="icon" type="image/x-icon" href="slike/smile.ico">
     <style>
     /* Osnovni stilovi */
         body {
@@ -180,6 +181,10 @@
         <h3>Audio i video elementi</h3>
         <p>HTML podržava VIDEO formate MP4, WebM i Ogg.</p>
         <p>HTML standard podržava AUDIO formate MP3, WAV i Ogg.</p>
+        <video width="320"height="240" controls autoplay muted poster="nba-poster.jpeg">
+        <source src="slike/video.mp4" type="video/mp4">
+        Your browser does not support the video tag. 
+        </video>
         <p>Ovo je primjer kako se piše kod za video:</p>
         <code>
             &lt;video width="320" height="240" controls autoplay muted poster="nba-poster.jpeg"&gt;<br>
@@ -201,7 +206,7 @@
         </code>
     
         <h4>Favicon</h4>
-        <p>Favicon su male slike koje služe za prepoznatljivost nekog brenda. Primjer je broj 24 u gornjem lijevom kutu URL-a stranice 24sata. Google preporučuje dimenziju 48x48 piksela.</p>
+        <p>Favicon su male slike koje služe za prepoznatljivost nekog brenda. Primjer je broj 24 u gornjem lijevom kutu URL-a stranice 24sata. Google preporučuje dimenziju 48x48 piksela. Postavljaju se u head od html dokumenta</p>
         <p>Primjer pisanja koda za favicon:</p>
         <code>
             &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
@@ -360,7 +365,31 @@
                 <td colspan="2"> Podatak 4 (spajanje 2 kolone)</td>
             </tr>
         </table>
-    
+
+        <p>Prikaz tablice sa slikama</p>
+          <table border="2">
+                <tr>
+                    <th colspan="2">Samsung</th>
+                    <th colspan="2">Apple</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="slike/galaxys8.webp" alt="galaxy s8"></td>
+                    <td rowspan="2">Galaxy S8</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="slike/x.webp" alt="iphone 9"></td>
+                    <td rowspan="2">Iphone 9</td>  
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="slike/s9.webp" alt="galaxy s9"></td>
+                    <td rowspan="2">Galaxy S9</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="slike/x.webp" alt="iphone x"></td>
+                    <td rowspan="2">Iphone X</td>  
+                </tr>
+            </table>  
+        <p>Slika se dodaje na ovaj način <code> &lt;td&gt;&lt;img src="" alt=""&gt;</code></p>
         <h1>Ugnježđene liste u HTML-u</h1>
         <p>
             HTML omogućuje korištenje uređenih (<code>&lt;ol&gt;</code>) i neuređenih (<code>&lt;ul&gt;</code>) lista za organizaciju sadržaja. Te liste mogu biti ugnježđene radi prikaza složenijih hijerarhija.
@@ -403,6 +432,16 @@
             </li>
             <li>Četvrta stavka</li>
         </ul>
+        <h3>Definicijska lista</h3>
+        <p>Primjer:</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd> HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+        <p> Definicijska lista piše se na način <code> &lt;dl&gt; &lt;dt&gt; HTML &lt;/dt&gt; &lt;dd&gt;HyperText Markup Language &lt;/dd&gt; <br>
+        &lt;dt&gt; CSS &lt;/dt&gt; &lt;dd&gt;Cascading Style Sheets &lt;/dd&gt; &lt;/dl&gt; </code></p>
     </section>
     
     <script>
