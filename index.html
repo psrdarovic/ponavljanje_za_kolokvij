@@ -143,9 +143,33 @@
         <p><strong>Naslovi:</strong> <code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</code>...</p>
         <p>Oznaka za paragraf: <code>&lt;p&gt;</code>. Primjer paragrafa s atributima:</p>
         <p style="color: red; font-weight: bold;">Ovaj paragraf ima crvenu boju i podebljan je.</p>
-        <img src="slike/stablo.jpg" alt="stablo">
-       <p>Relativna putanja za slike koristi <code>&lt;img src="slike/slika1.jpg" alt="opis slike" &gt;</code><code> src</code>pokazuje koja je putanja slika i<code>alt</code> prikazuje opis slike.</p>
-        <img src="https://www.profil-klett.hr/sites/default/files/styles/sx_1170/public/field/image/thinkstockphotos-450142183.jpg?itok=D52RkAFX" alt="stabla"><p>Tu je src putanja apsolutna <code>&lt;img src="https://www.profil-klett.hr/sites/default/files/styles/sx_1170/public/field/image/thinkstockphotos-450142183.jpg?itok=D52RkAFX" alt="opis sliek"</code>jer je označena sa URL-om </p> 
+        <figure>
+            <img src="slike/stablo.jpg" alt="stablo">
+            <figcaption>
+                Relativna putanja za slike koristi <code>&lt;img src="slike/slika1.jpg" alt="opis slike"&gt;</code>. 
+                <code>src</code> pokazuje koja je putanja slike, a <code>alt</code> prikazuje opis slike.
+            </figcaption>
+        </figure>
+        
+        <figure>
+            <img src="https://www.profil-klett.hr/sites/default/files/styles/sx_1170/public/field/image/thinkstockphotos-450142183.jpg?itok=D52RkAFX" alt="stabla">
+            <figcaption>
+                Tu je <code>src</code> putanja apsolutna 
+                <code>&lt;img src="https://www.profil-klett.hr/sites/default/files/styles/sx_1170/public/field/image/thinkstockphotos-450142183.jpg?itok=D52RkAFX" alt="opis slike"&gt;</code>, 
+                jer je označena sa URL-om.
+            </figcaption>
+        </figure>
+
+        <p><code>&lt;figure&gt;Element koji sadrži sliku i njen opis. Namijenjen je za označavanje samostalnih sadržaja kao što su slike ili grafike, te omogućuje lakše povezivanje s opisima ili tekstovima koji objašnjavaju sadržaje&lt;/figure&gt;</code></p>
+        <p> <code>&lt;a target="_blank" href="..."&gt; Hiperverzija koja omogućava otvaranje slike u novoj kartici preglednika &lt;/a&gt;</code></p>
+        <p> <code>&lt;figcaption&gt; ovaj element koristi se za dodavanje opisa ili natpisa vezanog uz sadržaj unutar &lt;figure&gt; &lt;/figcaption&gt;</code></p>
+        <p><code>&lt;figure&gt; <br>
+            &nbsp;&lt;img src="slike/stablo.jpg" alt="Stablo u parku"&gt; <br>
+            &nbsp;&lt;figcaption&gt; <br>
+                &nbsp;&nbsp;Opis slike <br>
+            &nbsp;&lt;/figcaption&gt; <br>
+        &lt;/figure&gt;</code>
+        </p>
         <p>Elementi u HTML-u koji se ne zatvaraju
              <ul>
                 <li>&lt;img&gt;-koristi se za umetanje slika</li>
