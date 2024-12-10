@@ -268,6 +268,10 @@
             &nbsp;&nbsp;&lt;input type="radio" name="gender" value="Female"&gt; Žensko&lt;br&gt;<br>
             &nbsp;&nbsp;&lt;input type="submit" value="Pošalji"&gt;<br>
             &nbsp;&nbsp;&lt;input type="reset" value="Poništi"&gt;<br>
+            &nbsp; &nbsp;&lt;label for="option1"&gt;Opcija 1&lt;/label&gt; <br>
+            &nbsp; &nbsp;&lt;input type="checkbox" id="option1" name="option1"&gt; <br>
+            &nbsp; &nbsp;&lt;label for="option2"&gt;Opcija 2&lt;/label&gt; <br>
+            &nbsp; &nbsp;&lt;input type="checkbox" id="option2" name="option2"&gt; <br>
             &lt;/form&gt;
         </code>
         <br>
@@ -282,6 +286,10 @@
             <input type="radio" name="gender" value="Female"> Žensko<br>
             <input type="submit" value="Pošalji">
             <input type="reset" value="Poništi">
+            <label for="option1">Opcija 1</label>
+            <input type="checkbox" id="option1" name="option1">
+            <label for="option2">Opcija 2</label>
+            <input type="checkbox" id="option2" name="option2">
         </form>
         <p>Obzirom na <span style="font-weight: bolder;">atribute</span>, <code>input</code> polje mijenja svoj oblik i funkciju:</p>
         <p><strong>Atributi</strong> koje <code>input</code> polje može primiti:</p>
@@ -309,26 +317,60 @@
         <h3>HTML FORME - INPUT</h3>
         <code>
             &lt;form action="adduser.php" method="post"&gt;<br>
-            &nbsp;&nbsp;&lt;label for="firstname"&gt;Ime: &lt;/label&gt;<br>
-            &nbsp;&nbsp;&lt;input type="text" id="firstname" name="firstname"&gt;&lt;br&gt;<br>
-            &nbsp;&nbsp;&lt;label for="lastname"&gt;Prezime: &lt;/label&gt;<br>
-            &nbsp;&nbsp;&lt;input type="text" id="lastname" name="lastname"&gt;&lt;br&gt;<br>
-            &nbsp;&nbsp;&lt;input type="submit" value="Pošalji"&gt;<br>
+            &nbsp;&nbsp;&lt;label for="firstname"&gt;Ime: &lt;/label&gt; <label for="firstname">Ime:</label><br>
+            &nbsp;&nbsp;&lt;input type="text" id="firstname" name="firstname"&gt;&lt;br&gt; <input type="text" id="firstname" name="firstname"><br>
+            &nbsp;&nbsp;&lt;label for="lastname"&gt;Prezime: &lt;/label&gt; <label for="lastname">Prezime:</label><br>
+            &nbsp;&nbsp;&lt;input type="text" id="lastname" name="lastname"&gt;&lt;br&gt; <input type="text" id="lastname" name="lastname"><br>
+            &nbsp;&nbsp;&lt;label for="email"&gt;E-mail: &lt;/label&gt; <label for="email">E-mail:</label><br>
+            &nbsp;&nbsp;&lt;input type="text" id="email" name="email"&gt;&lt;br&gt; <input type="text" id="email" name="email"><br>
+            &nbsp;&nbsp;&lt;input type="radio" name="gender" value="Male"&gt; Muško&lt;br&gt; <input type="radio" name="gender" value="Male">Muško<br>
+            &nbsp;&nbsp;&lt;input type="radio" name="gender" value="Female"&gt; Žensko&lt;br&gt; <input type="radio" name="gender" value="Female">Žensko<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Pošalji"&gt; <input type="submit" value="Pošalji"><br>
+            &nbsp;&nbsp;&lt;input type="reset" value="Poništi"&gt; <input type="reset" value="Poništi"><br>
+            &nbsp;&nbsp;&lt;input type="image" src="icons.png"&gt; <input type="image" src="slike/icons8-next-24.png"><br>
+            &nbsp;&nbsp;&lt;input type="hidden"&gt; <br>
             &lt;/form&gt;
         </code>
     
         <h4>HTML FORME SELECT I OPTION</h4>
-        <p>Primjer korištenja <code>select</code> i <code>option</code> elemenata:</p>
+        <p>Primjer korištenja <code>select</code> i <code>option</code> elemenata (imaju otvrajaući i zatvarajući element):</p>
         <code>
             &lt;select name="dropdown"&gt;<br>
             &nbsp;&nbsp;&lt;option value=""&gt;Molimo odaberite&lt;/option&gt;<br>
             &nbsp;&nbsp;&lt;option value="volvo"&gt;Volvo&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="audi"&gt;Audi&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="bmw"&gt;BMW&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="ford"&gt;Ford&lt;/option&gt;<br>
             &lt;/select&gt;
         </code>
         <br>
-        <select class="form-control" name="dropdown">
+        <select class="form-control" name="dropdown" id="car">
             <option value="">Molimo odaberite</option>
             <option value="volvo">Volvo</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            <option value="ford">Ford</option>
+        </select>
+         <p> select multiple oznake sa odabranim poljima
+            <code>
+                &lt;select multiple size="3" class="form-control" name="car" id="car"&gt; <br>
+                &nbsp;&lt; option value=""&gt;"molimo odaberite" &lt;/option&gt; <br>
+                &nbsp;&lt; option value="volvo"&gt;Volvo &lt;/option&gt; <br>
+                &nbsp;&lt; option value="saab"&gt;Saab &lt;/option&gt; <br>
+                &nbsp;&lt; option value="mercedes"&gt;Mercedes &lt;/option&gt; <br>
+                &nbsp;&lt; option value="audi"&gt;Audi &lt;/option&gt; <br>
+                &lt;/select&gt;
+            </code>
+         </p>
+        <select multiple size="3" class="form-control" name="care" id="car">
+            <option value="">Molimo odaberite</option>
+            <option value="volvo">Volvo</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            <option value="ford">Ford</option>
         </select>
         
         <h4>HTML FORME TEXTAREA</h4>
